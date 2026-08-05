@@ -1,4 +1,5 @@
 
+#[derive(Debug)]
 enum dtype{
     kfor,
     plus,
@@ -6,7 +7,8 @@ enum dtype{
     star,
     div,
     kwhile,
-    num(char);
+    num(char),
+    iden(char),
     kbreak,
     cont,
     kstruct,
@@ -28,6 +30,7 @@ fn destr(string val) -> dtype {
         "/" => dtype::div,
         "while" => dtype::kwhile,
         "break" => dtype::kbreak,
+        0..9 => dtype::num(val.as_str()),
         _ => dtype::null,
     }
 }

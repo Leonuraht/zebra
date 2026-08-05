@@ -1,16 +1,13 @@
 use std::env;
 use std::io;
 use std::fs;
-use lexer;
+mod lexer;
 
 #[derive(Debug,Default)]
 struct Inargs {
     filename : String , 
     flags : Vec<char>,
 }
-
-
-
 
 fn main() -> io::Result<()>{
     let mut argval = Inargs::default();
