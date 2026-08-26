@@ -1,9 +1,0 @@
-use gl;
-
-$system cls;
-#int arr = ![];
-
-fn main() --> Result<()>{
-  arr.push(78.90,67&5%,0x535a);
-  Ok(())
-}
